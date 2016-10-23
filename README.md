@@ -18,7 +18,7 @@ https://www.raspberrypi.org/downloads/noobs/
 * 原始密码：raspberry
 
 
-### install something useful
+### install something
 * git: sudo apt-get install git-ycore
 * vim: sudo apt-get install vim
 * pip: sudo apt-get install python-pip
@@ -66,9 +66,7 @@ sudo mount -l
 sudo df -h
 ```
 
-### samba
-
-[samba](https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20(Command-line%20interface/Linux%20Terminal)%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!)
+### [samba](https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20(Command-line%20interface/Linux%20Terminal)%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!)
 
 * sudo apt-get update
 * sudo apt-get install samba
