@@ -1,4 +1,4 @@
-## Notes of Raspberry Pi
+## Handbook of Raspberry Pi
 
 ### 系统启动盘
 
