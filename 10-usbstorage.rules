@@ -1,7 +1,7 @@
 # http://www.reactivated.net/writing_udev_rules.html
 # sudo vim /etc/udev/rules.d/10-usbstorage.rules
 # sudo /etc/init.d/udev restart
-# or udevadm control --reload-rules
+# or sudo udevadm control --reload-rules
 KERNEL!="sd*",GOTO="media_by_label_auto_mount_end"
 SUBSYSTEM!="block",GOTO="media_by_label_auto_mount_end"
 IMPORT{program}="/sbin/blkid -o udev -p %N"

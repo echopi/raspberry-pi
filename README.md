@@ -23,8 +23,26 @@ https://www.raspberrypi.org/downloads/noobs/
 * vim: sudo apt-get install vim
 * pip: sudo apt-get install python-pip
 
+### 时区
+
+1. sudo apt-get install ntpdate 
+2. tzselect: Asia China Beijing
+3. sudo ntpdate cn.pool.ntp.org
+4. date
+
+> cn.pool.ntp.org 是国内的ntp服务器
 
 ### mount
+
+exFAT & ntfs
+
+```
+sudo apt-get update
+sudo apt-get install ntfs-3g
+sudo apt-get install exfat-fuse exfat-utils
+```
+
+
 
 1.0 插上自动识别挂载在某一目录下，拔下自动umount
 
