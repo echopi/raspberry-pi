@@ -14,8 +14,8 @@ https://www.raspberrypi.org/downloads/noobs/
 /etc/apt/sources.list
 
 ### ssh
-默认用户名：pi
-原始密码：raspberry
+* 默认用户名：pi
+* 原始密码：raspberry
 
 
 ### install something useful
@@ -26,7 +26,7 @@ https://www.raspberrypi.org/downloads/noobs/
 
 ### mount
 
-1. 插上自动识别挂载在某一目录下，拔下自动umount
+1.0 插上自动识别挂载在某一目录下，拔下自动umount
 
 ```
 sudo vim /etc/udev/rules.d/10-usbstorage.rules
@@ -60,7 +60,7 @@ sudo vim /etc/fstab
 #保存重启，即可生效
 ```
 
-3. 查看挂载信息
+3.0 查看挂载信息
 ```
 sudo mount -l
 sudo df -h
@@ -69,16 +69,25 @@ sudo df -h
 ### samba
 
 [samba](https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20(Command-line%20interface/Linux%20Terminal)%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!)
-sudo apt-get update
-sudo apt-get install samba
-sudo smbpasswd -a <user_name>: e.g. pi
-mkdir /home/pi/xunlei
-sudo cp /etc/samba/smb.conf ~
-sudo vim /etc/samba/smb.conf
-sudo /etc/init.d/samba restart
+
+* sudo apt-get update
+* sudo apt-get install samba
+* sudo smbpasswd -a <user_name>: e.g. pi
+* mkdir /home/pi/xunlei
+* sudo cp /etc/samba/smb.conf ~
+* sudo vim /etc/samba/smb.conf
+* sudo /etc/init.d/samba restart
+
+Remember that your user must have permission to write and edit the folder you want to share.
 
 ```
-#append to smb.conf
+sudo chown <user_name> /var/opt/blah/blahblah
+sudo chown :<user_name> /var/opt/blah/blahblah
+```
+
+
+```
+# add to smb.conf
 [media]
 path=/media
 validusers=pi
@@ -87,22 +96,16 @@ public=yes
 writable=yes
 ```
 
-Remember that your user must have permission to write and edit the folder you want to share.
-```
-sudo chown <user_name> /var/opt/blah/blahblah
-sudo chown :<user_name> /var/opt/blah/blahblah
-```
 
 
 
-
-### 1. aria2
+### aria2
 * 目录：/etc/aria2
 * 配置：/etc/aria2/aria2.conf
 * 服务：/etc/init.d/aria2c
 
 
-### 2. xunlei
+### xunlei
 利用树莓派搭建迅雷远程下载服务器
 http://www.jianshu.com/p/17cee17159f4
 
@@ -121,7 +124,7 @@ go to http://yuancheng.xunlei.com, bind your device with the active code.
 finished.
 
 
-### 3. transmission
+### transmission
 
 
 ### 保护硬盘
@@ -223,8 +226,6 @@ sudo update-rc.d aria2 defaults
 
 or edit: /etc/rc.local
 nohup sudo -u pi /home/pi/xunlei/portal >/dev/null 2>&1 &
-
-
 
 
 ### 常用命令
