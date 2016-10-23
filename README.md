@@ -126,7 +126,9 @@ finished.
 
 
 ### 保护硬盘
-由于树莓派 24 小时不断电，大部分时间硬盘是空闲的，为了省电，同时保护硬盘，可以设置空闲的时候自动停转（spin down），进入 standby 状态。编辑 hdparm 的配置文件/etc/hdparm.conf：
+由于树莓派 24 小时不断电，大部分时间硬盘是空闲的，为了省电，同时保护硬盘，可以设置空闲的时候自动停转（spin down），进入 standby 状态。
+
+编辑 hdparm 的配置文件/etc/hdparm.conf：
 
 ```
 quiet 
