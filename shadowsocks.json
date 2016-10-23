@@ -1,0 +1,10 @@
+{
+  "server": "vip-us01-2.ssv7.net",
+  "server_port": 51394,
+  "local_address": "0.0.0.0",
+  "local_port": 1080,
+  "password": "xxxxxxxx",
+  "timeout": 300,
+  "method": "aes-256-cfb",
+  "fast_open": false
+}
