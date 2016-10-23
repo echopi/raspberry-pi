@@ -104,23 +104,22 @@ writable=yes
 
 
 ### xunlei
-利用树莓派搭建迅雷远程下载服务器
-http://www.jianshu.com/p/17cee17159f4
+
+[利用树莓派搭建迅雷远程下载服务器](http://www.jianshu.com/p/17cee17159f4)
 
 vim ~/xunlei/etc/thunder_mounts.cfg
+
 ```
 valiable_mount_path_pattern
 {
 /media/pi/HD/TDDOWNLOAD
 }
 ```
-http://192.168.0.106:9001:9001/getusedpartitioninfo
-http://192.168.0.106:9001/getsysinfo
 
-THE ACTIVE CODE IS: ffvksv
-go to http://yuancheng.xunlei.com, bind your device with the active code.
-finished.
-
+link
+* http://192.168.0.106:9001:9001/getusedpartitioninfo
+* http://192.168.0.106:9001/getsysinfo
+* http://yuancheng.xunlei.com
 
 ### transmission
 
@@ -128,17 +127,15 @@ finished.
 ### 保护硬盘
 由于树莓派 24 小时不断电，大部分时间硬盘是空闲的，为了省电，同时保护硬盘，可以设置空闲的时候自动停转（spin down），进入 standby 状态。
 
-编辑 hdparm 的配置文件/etc/hdparm.conf：
+sudo vim /etc/hdparm.conf
 
 ```
 quiet 
 apm = 127
 spindown_time = 60
-
 ```
 
 apm 设置高级电源管理功能，越小表示越激进，0-127 允许 spin down。spindown_time 设置停转的超时时间，1-240 的单位是 5s，因此设为 60 表示 5 分钟没有读写硬盘将停转。
-这里顺便说一下，西数硬盘声名狼藉的 C1 问题（LCC 增长很快）就跟高级电源管理特性有关，解决办法一般是用 wdidle3 将固件里的超时时间改大。
 
 
 
