@@ -159,6 +159,9 @@ sslocal -c ~/shadowsocks.json -d stop
 ```
 
 ### vnc
+
+性能跟不上，vnc 基本不用了
+
 1. install: sudo apt-get update && sudo apt-get install tightvncserver
 2. set password: vncpasswd (hello1234)
 3. new a vnc desktop: tightvncserver
@@ -216,19 +219,23 @@ ls Xvnc
 
 
 ### 一些常用目录
+
 * /etc/init.d
 * 密码管理：/etc/passwd
 
 
 ### 开机自启
+
+```
 sudo update-rc.d xunlei defaults
 sudo update-rc.d aria2 defaults
 
 or edit: /etc/rc.local
 nohup sudo -u pi /home/pi/xunlei/portal >/dev/null 2>&1 &
-
+```
 
 ### 常用命令
+
 * sudo fdisk -l
 * sudo blkid: 成功识别到硬盘后，可以查询文件系统类型、LABEL、UUID等信息
 * sudo reboot
@@ -236,7 +243,6 @@ nohup sudo -u pi /home/pi/xunlei/portal >/dev/null 2>&1 &
 * uname -a: 系统内核信息查询
 * sudo crontab -l
 * ls -lR /dev/disk
-
 
 
 ### 文件管理——百度网盘直链系统V2.0
