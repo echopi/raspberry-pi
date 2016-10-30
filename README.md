@@ -18,7 +18,7 @@ https://www.raspberrypi.org/downloads/noobs/
 * 原始密码：raspberry
 
 
-### install something
+### install
 * git: sudo apt-get install git-ycore
 * vim: sudo apt-get install vim
 * pip: sudo apt-get install python-pip
