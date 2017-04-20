@@ -135,9 +135,12 @@ valiable_mount_path_pattern
 ```
 
 link
-* http://192.168.0.106:9001:9001/getusedpartitioninfo
-* http://192.168.0.106:9001/getsysinfo
+* http://192.168.0.108:9001/getusedpartitioninfo
+* http://192.168.0.108:9001/getsysinfo
 * http://yuancheng.xunlei.com
+
+
+> 通过 192.168.0.108:9001/getsysinfo 获取激活码，是一个数字串
 
 ### transmission
 
