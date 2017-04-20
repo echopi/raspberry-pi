@@ -204,8 +204,8 @@ nohup sudo -u pi /home/pi/xunlei/portal >/dev/null 2>&1 &
 
 
 ### 文件管理——百度网盘直链系统V2.0
-http://bdbea3.duapp.com/baidu_pcs/file_manage.php
-
+* [deprecated] http://bdbea3.duapp.com/baidu_pcs/file_manage.php
+* http://pan.plyz.net/Man.aspx
 
 ### 树莓派设置支持中文
 http://www.jianshu.com/p/00fc5725d3fc
